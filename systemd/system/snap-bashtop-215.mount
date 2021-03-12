@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for bashtop, revision 215
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/bashtop_215.snap
+Where=/snap/bashtop/215
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target
